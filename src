@@ -1,0 +1,33 @@
+import cv2
+import numpy as np
+
+def image_to_ascii(image_path):
+    # Load the image
+    image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+    
+    # Resize the image
+    image = cv2.resize(image, (100, 100))
+    
+    # Normalize the pixel values
+    image = cv2.normalize(image, None, 0, 255, cv2.NORM_MINMAX)
+    
+    # Define the ASCII characters to use
+    ascii_chars = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ","]
+    
+    # Create an empty list to store the ASCII characters
+    ascii_art = []
+    
+    # Map each pixel in the image to an ASCII character
+    for row in image:
+        ascii_row = []
+        for pixel in row:
+            index = int(pixel / 25.5)
+            ascii_row.append(ascii_chars[index])
+        ascii_art.append(ascii_row)
+    
+    return ascii_art
+
+# Test the image_to_ascii function
+ascii_art = image_to_ascii("image.jpg")
+for row in ascii_art:
+    print("".join(row))

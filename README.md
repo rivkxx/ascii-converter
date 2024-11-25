@@ -16,7 +16,8 @@ Save the ASCII art: The ASCII art can be saved to a text file or displayed in a 
 
 The end result is a pixelated representation of the image created using ASCII characters, which can be saved or displayed in a variety of formats.
 
-![image](https://user-images.githubusercontent.com/81345344/216778979-4bcaee2a-b012-419e-935e-60e1c2404832.png)
+![image](https://github.com/user-attachments/assets/433b1fb8-6872-4b56-a592-ff187be437ba)
+
 
 you can create one for binarry numbers by changing the symbol characters to "1" and "0" respectively
 
